@@ -1,0 +1,7 @@
+New log file opened at Wed May 18 15:04:45 AEST 2016 by 23177@ip-10-10-0-183.ap-southeast-2.compute.internal
+Taking next connection to: 50718
+New client attempting to connect on port: 50719-50718
+  Address = /10.10.0.183:50718
+This client on port 50719 has uuid 0c9803a1-02c9-4d80-934f-0d9c6ef7f8c6 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-0c9803a1-02c9-4d80-934f-0d9c6ef7f8c6
+Taking next connection to: 50718
