@@ -5,6 +5,7 @@ import javax.inject._
 import play.api.libs.ws.{WSRequest, WSClient}
 
 import scala.concurrent._
+import scala.concurrent.duration._
 import ExecutionContext.Implicits.global
 
 import services.quotes.MarketQuotesClient
@@ -38,7 +39,11 @@ class YahooQuotesClient @Inject() (ws: WSClient) extends MarketQuotesClient {
         )
 
       //TODO PASS THIS FUTURE TO THE CONTROLLER
-      request.get().map( s => println( s.body) )
+    //println( println(Await.result(request.get(), 10000 milliseconds ).body))
+    //println("Mariquita")
+    //request.get.map( s => println( s.body) )
+
+
 
 
 

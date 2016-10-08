@@ -10,7 +10,9 @@ import services.quotes.MarketQuotesClient
  * application's home page.
  */
 @Singleton
-class HomeController @Inject() (quotesClient : MarketQuotesClient) extends Controller {
+class HomeController @Inject() (quotesClient : MarketQuotesClient)(webJarAssets: WebJarAssets) extends Controller {
+
+
 
   /**
    * Create an Action to render an HTML page with a welcome message.
@@ -22,7 +24,7 @@ class HomeController @Inject() (quotesClient : MarketQuotesClient) extends Contr
 
     quotesClient.getQuote("GOOG")
 
-    Ok(views.html.index("Your new application is ready."))
+    Ok(views.html.index(webJarAssets))
   }
 
 }
