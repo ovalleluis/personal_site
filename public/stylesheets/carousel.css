@@ -50,7 +50,7 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 500px;
-  background-color: #777;
+  background-color: rgb(0, 169, 224);
 }
 .carousel-inner > .item > img {
   position: absolute;
@@ -60,6 +60,18 @@ body {
   height: 500px;
 }
 
+
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(left,color-stop(rgba(0,0,0,.2) 0),color-stop(rgba(0,0,0,.0001) 100%));
+  background-image: linear-gradient(to right,rgba(0,0,0,.2) 0,rgba(0,0,0,.0001) 100%);
+
+}
+
+.carousel-control.right {
+  background-image: -webkit-linear-gradient(left,color-stop(rgba(0,0,0,.0001) 0),color-stop(rgba(0,0,0,.2) 100%));
+  background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.2) 100%);
+
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
