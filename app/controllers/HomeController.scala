@@ -1,8 +1,12 @@
 package controllers
 
 import javax.inject._
+import akka.actor.ActorSystem
+import akka.stream.Materializer
 import play.api._
+import play.api.libs.streams._
 import play.api.mvc._
+import services.actors.MyWebSocketActor
 import services.quotes.MarketQuotesClient
 
 /**
@@ -10,9 +14,13 @@ import services.quotes.MarketQuotesClient
  * application's home page.
  */
 @Singleton
-class HomeController @Inject() (quotesClient : MarketQuotesClient)(webJarAssets: WebJarAssets) extends Controller {
+class HomeController @Inject() (quotesClient : MarketQuotesClient)(webJarAssets: WebJarAssets)
+                               (implicit  system: ActorSystem, materializer: Materializer) extends Controller {
 
 
+  def ws = WebSocket.accept[String, String] { request =>
+    ActorFlow.actorRef(out => MyWebSocketActor.props(out))
+  }
 
   /**
    * Create an Action to render an HTML page with a welcome message.
@@ -21,8 +29,6 @@ class HomeController @Inject() (quotesClient : MarketQuotesClient)(webJarAssets:
    * a path of `/`.
    */
   def index = Action {
-
-    quotesClient.getQuote("GOOG")
 
     Ok(views.html.index(webJarAssets))
   }

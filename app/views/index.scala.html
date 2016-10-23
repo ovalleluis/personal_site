@@ -47,6 +47,7 @@
                                 <li><a href="#investment">Show me the Money!</a></li>
                                 <li><a href="#contact">About Me</a></li>
                                 <li><a href="#contact">Contact</a></li>
+                                <li id="clock"></li>
                                 <!--<li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
@@ -203,6 +204,8 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="@routes.WebJarAssets.at(webJarAssets.locate("jquery.min.js"))"></script>
         <script src="@routes.WebJarAssets.at(webJarAssets.locate("js/bootstrap.min.js"))"></script>
+        <script src='@routes.WebJarAssets.at(webJarAssets.fullPath("react", "react.js"))'></script>
+        <script src="@routes.Assets.versioned("javascripts/commons.js")"></script>
 
             <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>

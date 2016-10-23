@@ -38,15 +38,6 @@ class YahooQuotesClient @Inject() (ws: WSClient) extends MarketQuotesClient {
           "ignore" -> ".csv"
         )
 
-      //TODO PASS THIS FUTURE TO THE CONTROLLER
-    //println( println(Await.result(request.get(), 10000 milliseconds ).body))
-    //println("Mariquita")
-    //request.get.map( s => println( s.body) )
-
-
-
-
-
 
   }
 }
