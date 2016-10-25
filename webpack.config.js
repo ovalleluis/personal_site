@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
     entry: "./app/assets/javascripts/commons.jsx",
 
@@ -14,9 +16,14 @@ module.exports = {
                 exclude: /node_modules/,
                 query:
                 {
-                   presets:['es2015', 'react']
+                    presets: ['react', 'es2015', 'stage-0'],
                 }
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            "React": "react",
+        }),
+    ]
 };
