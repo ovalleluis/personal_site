@@ -35,7 +35,8 @@ body {
 
 /* Container base class */
 .section-box {
-  height: 400px
+  height: 400px;
+  overflow-y: scroll;
 }
 
 .section {
