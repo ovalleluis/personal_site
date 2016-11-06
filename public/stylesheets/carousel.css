@@ -33,6 +33,24 @@ body {
   width: auto;
 }
 
+/* Container base class */
+.section-box {
+  height: 400px
+}
+
+.section {
+  padding-top: 150px;
+  margin: auto;
+  text-align: center;
+}
+
+.section .row .logo {
+  width: 160px;
+  display: inline-block;
+  margin: 20px;
+
+
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */

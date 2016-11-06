@@ -14,13 +14,7 @@ import services.quotes.MarketQuotesClient
  * application's home page.
  */
 @Singleton
-class HomeController @Inject() (quotesClient : MarketQuotesClient)(webJarAssets: WebJarAssets)
-                               (implicit  system: ActorSystem, materializer: Materializer) extends Controller {
-
-
-  def ws = WebSocket.accept[String, String] { request =>
-    ActorFlow.actorRef(out => MyWebSocketActor.props(out))
-  }
+class HomeController @Inject() (webJarAssets: WebJarAssets) extends Controller {
 
   /**
    * Create an Action to render an HTML page with a welcome message.
