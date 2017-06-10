@@ -3,7 +3,22 @@
 
 
     <!-- Carousel
+
+
+
         ================================================== -->
+    <script type="text/javascript">
+
+    function sendTestEvent() {
+      _paq.push(['setUserId', 'foo_user']);
+      _paq.push(['trackEvent', 'foo_tool', 'start_tool']);
+      alert("test event sent")
+    }
+
+    </script>
+
+
+
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -17,7 +32,7 @@
                     <div class="carousel-caption">
                         <h1>"Those who can, do; those who can't, teach."</h1>
                         <p>I please myself of not being able to teach you many things. That being clear, what are we building? </p>
-                        <p><a class="btn btn-lg btn-primary" role="button" href="mailto:ovalle.luis+stromileATgmailDOTcom"/>eMail Me</a></p>
+                        <p><a class="btn btn-lg btn-primary" role="button" href="mailto:ovalle.luis+stromileATgmailDOTcom" onclick="sendTestEvent();return false;"/>eMail Me</a></p>
                     </div>
                 </div>
             </div>
