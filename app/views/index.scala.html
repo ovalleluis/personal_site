@@ -10,9 +10,9 @@
     <script type="text/javascript">
 
     function sendTestEvent() {
-      _paq.push(['setCustomDimension', customDimensionId = 1, customDimensionValue = 'fooDimensionValue']);
+
       _paq.push(['setUserId', 'foo_user']);
-      _paq.push(['trackEvent', 'foo_tool', 'start_tool']);
+      _paq.push(['trackEvent', 'foo_tool', 'start_tool', "foo_name", "foo_value", {dimension1: 'DimensionFooValue'}]);
       alert("test event sent")
     }
 
